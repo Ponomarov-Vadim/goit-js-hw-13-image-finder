@@ -38,16 +38,10 @@ const showImages = function (e) {
 
       if (perPage > 1) {
         window.scrollTo({
-          top: window.scrollY - 60,
+          top: window.scrollY + window.innerHeight - 56,
           left: 0,
+          behavior: 'smooth',
         });
-        setTimeout(() => {
-          window.scrollTo({
-            top: window.scrollY + window.innerHeight,
-            left: 0,
-            behavior: 'smooth',
-          });
-        }, 500);
       }
     });
 
